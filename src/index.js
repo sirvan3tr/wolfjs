@@ -2,14 +2,14 @@ const examples = require('./wolfjs_examples.js');
 
 const tabs = 4  // tab spaces
 
-const lines = examples.test3.split('\n');
+var lines = examples.test3.split('\n');
 
 var l = 0;
 var main = [];
 var stack = [];
 while (l < lines.length) {
-    const line = lines[l];
-    const spaces = line.search(/\S/);
+    var line = lines[l];
+    var spaces = line.search(/\S/);
     if (spaces <= stack[stack.length - 1]) {
         const paddingChars = new Array(spaces + 1).join(' ');
         main.push(`${paddingChars}}`);
